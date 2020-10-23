@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+
+
+<head>
+    <title>The Lagg Is Real</title>
+
+    <!-- scripts here -->
+    <script type="text/javascript" src="googleTranslate.js"></script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+    <!-- stylesheets here-->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- other stuff here -->
+    <link rel="icon" type="image/png" href="favicon.ico">
+</head>
+
+<body style="background-color:rgb(255, 255, 255);">
+
+    <div class="topnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#about">About</a>
+        <div class="topnav-right">
+            <input type="text" id="search" placeholder="Search">
+            <button type="submit" onclick="search(); return false">Search</button>
+            <a href="contact.html">Contact </a>
+        </div>
+    </div>
+
+
+
+    <div style="width: 50%;">
+        <div style="margin-top: 80px;">
+         <div style="float: left;">
+            <form id="form" onsubmit='nameCheck(); return false'>
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" value=""><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" value=""><br><br>
+                <input type="submit" value="Submit">
+            </form>
+            </div>
+        </div>
+        <div style="margin-left: 50%;">
+            <dl>
+                <dt>First Name</dt>
+                <dd>- 名字</dd>
+                <dt>Last Name</dt>
+                <dd>- 姓名</dd>
+            </dl>
+        </div>
+    </div>
+
+    <div id="google_translate_element"></div>
+    <br><br>
+
+    <h2>
+        todo list?:-
+    </h2>
+    <h4>
+        probably copy stuff over to contact.html at the end to make it consistent
+    </h4>
+
+    <footer class="botnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#about">About</a>
+        <div class="botnav-right">
+            <a href="#search">Search</a>
+            <a href="contact.html">Contact </a>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+<html>
+
+<head>
+    <link rel="icon" type="image/png" href="favicon.ico">
+</head>
+
+<body>
+    <h1>You searched for: <span style="color:cyan" id="searched"></span></h1>
+</body>
+
+<script>
+    window.onload = document.getElementById("searched").innerHTML = localStorage.getItem("searchText")
+</script>
+
+</html>
