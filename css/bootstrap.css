@@ -8275,6 +8275,15 @@ a.text-dark:focus, a.text-dark:hover {
     visibility: hidden!important
 }
 
+.footer {
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media print {
     *, ::after, ::before {
         text-shadow: none!important;
