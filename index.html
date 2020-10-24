@@ -14,34 +14,36 @@
 
     <!-- stylesheets here-->
     <link rel="stylesheet" href="style.css">
-
+    
     <!-- other stuff here -->
     <link rel="icon" type="image/png" href="favicon.ico">
 </head>
 
 <body style="background-color:rgb(255, 255, 255);">
 
-    <div class="topnav">
+    <div class="nav top">
         <a href="index.html" class="active">Home</a>
         <a href="#news">News</a>
         <a href="#about">About</a>
-        <div class="topnav-right">
+        <div class="nav-right top">
             <input type="text" id="search" placeholder="Search">
             <button type="submit" onclick="search(); return false">Search</button>
-            <a href="contact.html">Contact </a>
+            <a href="contact.html">Contact</a>
         </div>
     </div>
 
+
+
     <div style="width: 50%;">
         <div style="margin-top: 80px;">
-            <div style="float: left;">
-                <form id="form" onsubmit='nameCheck(); return false'>
-                    <label for="fname">First name:</label><br>
-                    <input type="text" id="fname" name="fname" value=""><br>
-                    <label for="lname">Last name:</label><br>
-                    <input type="text" id="lname" name="lname" value=""><br><br>
-                    <input type="submit" value="Submit">
-                </form>
+         <div style="float: left;">
+            <form id="form" onsubmit='nameCheck(); return false'>
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" value=""><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" value=""><br><br>
+                <input type="submit" value="Submit">
+            </form>
             </div>
         </div>
         <div style="margin-left: 50%;">
@@ -54,23 +56,17 @@
         </div>
     </div>
 
-    <div id="google_translate_element"></div>
-    <br><br>
-
-    <h2>
-        todo list?:-
-    </h2>
-    <h4>
-        probably copy stuff over to contact.html at the end to make it consistent
-    </h4>
-
-    <footer class="botnav">
+    
+    <footer class="nav bot">
         <a href="index.html" class="active">Home</a>
         <a href="#news">News</a>
         <a href="#about">About</a>
-        <div class="botnav-right">
-            <a href="#search">Search</a>
-            <a href="contact.html">Contact </a>
+        <div style="text-align: center;"></div>
+            <div id="google_translate_element"></div>
+            <div class="bot nav-right">
+                <a href="#search">Search</a>
+                <a href="http://rjlee.ddns.net">Contact </a>
+            </div>
         </div>
     </footer>
 </body>

@@ -4,61 +4,68 @@
 
 
 <head>
-    <title>Contact</title>
-    <script type="text/javascript" src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <title>The Lagg Is Real</title>
 
+    <!-- scripts here -->
+    <script type="text/javascript" src="googleTranslate.js"></script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+    <!-- stylesheets here-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="confuse.css">
+
+    <!-- other stuff here -->
     <link rel="icon" type="image/png" href="favicon.ico">
 </head>
 
 <body style="background-color:rgb(255, 255, 255);">
 
-    <div class="topnav">
+    <div class="nav top">
         <a href="index.html">Home</a>
         <a href="#news">News</a>
         <a href="#about">About</a>
-        <div class="topnav-right">
-            <a href="#search">Search</a>
-            <a href="contact.html" class="active">Contact </a>
+        <div class="nav-right top">
+            <input type="text" id="search" placeholder="Search">
+            <button type="submit" onclick="search(); return false">Search</button>
+            <a href="contact.html" class="active">Contact</a>
         </div>
     </div>
 
+    <div class="center  ">
+        <h1>
+            <div style="margin-top: 80px;">
+                <span style="color: red;">♥</span> Come write your name here I want to contact you <span
+                    style="color: red;">♥</span>
+            </div>
+        </h1>
 
-    <h1>
-        <div style="margin-top: 80px;">
-            <span style="color: red;">♥</span> Come write your name here I want to contact you <span
-            style="color: red;">♥</span>
-        </div>
-    </h1>
-
-    <div style="width: 50%;">
-        <div style="float: left;">
-            <form id="form" onsubmit='nameCheck(); return false'>
-                <label for="fname">First name:</label><br>
-                <input type="text" id="fname" name="fname" value=""><br>
-                <label for="lname">Last name:</label><br>
-                <input type="text" id="lname" name="lname" value=""><br><br>
-                <input type="submit" value="Submit">
+        <div style="width: 50%; float: left;">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else. Pinky Promise</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
             </form>
-
-        </div>
-        <div style="margin-left: 50%;">
-            <dl>
-                <dt>First Name</dt>
-                <dd>- 名字</dd>
-                <dt>Last Name</dt>
-                <dd>- 姓名</dd>
-            </dl>
         </div>
     </div>
 
-    <footer class="botnav">
-        <a href="index.html" class="active">Home</a>
+    <footer class="nav bot">
+        <a href="index.html">Home</a>
         <a href="#news">News</a>
         <a href="#about">About</a>
-        <div class="topnav-right">
+        <div class="bot nav-right">
             <a href="#search">Search</a>
-            <a href="contact.html">Contact </a>
+            <a href="http://rjlee.ddns.net" class="active">Contact </a>
         </div>
     </footer>
 </body>

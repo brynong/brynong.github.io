@@ -4,16 +4,28 @@ body {
     font-family: Helvetica;
 }
 
-.topnav {
+.center {
+    margin: auto;
+    width: 50%;
+}
+
+.nav {
     overflow: hidden;
     background-color: rgb(51, 51, 51);
     position: fixed;
     width: 100%;
-    top: 0;
-    height: 5%;
+    height: 45px;
 }
 
-.topnav a { 
+.top {
+    top: 0;
+}
+
+.bot {
+    bottom: 0;
+}
+
+.nav a {
     float: left;
     color: #f2f2f2;
     text-align: center;
@@ -22,54 +34,26 @@ body {
     font-size: 17px;
 }
 
-.topnav a:hover {
+.nav a:hover {
     background-color: rgb(221, 221, 221);
     color: black;
 }
 
-.topnav a.active {
+.nav a.active {
     background-color: #00a2ff;
     color: white;
 }
 
-.topnav-right {
+.nav-right {
     float: right;
 }
 
-.topnav input[type=text], .topnav button {
+.nav input[type=text], .nav button {
     float: left;
     padding: 6px;
     border: none;
     margin-top: 8px;
     font-size: 17px;
-}
-
-.botnav {
-    overflow: hidden;
-    background-color: rgb(51, 51, 51);
-}
-
-.botnav a { 
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-.botnav a:hover {
-    background-color: rgb(221, 221, 221);
-    color: black;
-}
-
-.botnav a.active {
-    background-color: #00a2ff;
-    color: white;
-}
-
-.botnav-right {
-    float: right;
 }
 
 footer {
