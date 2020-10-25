@@ -21,40 +21,6 @@ function search() {
     }
 }
 
-// let playing = false;
-// function music() {
-//     sound = document.getElementById('sound1');
-//     if (!playing) {
-//         sound.play();
-//         document.getElementById('soundbutton1').innerHTML = "Stop it"
-//         document.getElementById('soundbutton2').innerHTML = "Stop it"
-//     } else {
-//         sound.pause();
-//         sound.currentTime = 0;
-//         document.getElementById('soundbutton1').innerHTML = "Play it"
-//         document.getElementById('soundbutton2').innerHTML = "Play it"
-//     }
-//     playing = !playing
-// }
-
-// function goblin() {
-//     sound = document.getElementById('goblin')
-//     sound.play()
-// }
-
-// let rickrollplaying = false;
-// function rickroll() {
-//     sound = document.getElementById('rickroll');
-//     if (!rickrollplaying) {
-//         sound.play();
-//         document.getElementById('rickrollbutton').innerHTML = "Pause"
-//     } else {
-//         sound.pause();
-//         document.getElementById('rickrollbutton').innerHTML = "Play it"
-//     }
-//     rickrollplaying = !rickrollplaying
-// }
-
 function music(audio, buttons) {
     sound = document.getElementById(audio);
     if (sound.paused) {
@@ -68,4 +34,24 @@ function music(audio, buttons) {
             document.getElementById(element).innerHTML = "Play it"
         });
     }
+}
+
+let toasts = [
+    'good morning?',
+    'hehe',
+    'is it too fast?',
+    'XD',
+    'you\'ve got work to do',
+    'what are you looking at',
+    'do the footer mou',
+    'lnao',
+    'bok bok bok bok',
+    'Make footer like header so that it can be added to all the sites'
+]
+
+function toast() {
+    const i = Math.floor(Math.random() * toasts.length)
+    document.getElementById("toast-body").innerHTML = toasts[i]
+
+    $(".toast").toast('show')
 }
