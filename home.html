@@ -3,9 +3,13 @@
 <meta charset="utf-8">
 
 <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
+    <!-- link here -->
+    <link rel="icon" type="image/png" href="assets/chicken.png">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- script here -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -14,104 +18,199 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
 
-    <link rel="icon" type="image/png" href="images/favicon.ico">
-    <link rel="stylesheet" href="css/bryn.css">
+    <script src="js/script.js"></script>
+
+
     <title>Bok Bok</title>
+    <audio id="chicken" src="assets/chicken.mp3" preload="auto" loop></audio>
+    <audio id="goblin" src="assets/goblin.ogg" preload="auto"></audio>
+    <audio id="rickroll" src="assets/rickroll.mp3" preload="auto"></audio>
+
 </head>
 
 <body style="background-color: lightgray;">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="home.html">
-            <img src="images/cross.png" width="30" height="30" class="d-inline-block align-top" alt=""
-                loading="lazy">Testing</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <div id="header"></div>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Index</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        PFFRO
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Big Brain</a>
-                        <a class="dropdown-item" href="#">Yuge Brain</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Smol Boi</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-            </form>
+    <div class="container" style="padding-top: 20px; padding-bottom: 10px;">
+        <div class="row">
+            <div class="col-6 col-md">
+                <h5>Phones</h5>
+                <ul class="list-group text-small">
+                    <a class="list-group-item list-group-item-action list-group-item-dark"
+                        href="https://www.sony.com/electronics/phones/t/smartphones" target="_blank">Sony</a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark" href="https://www.apple.com/"
+                        target="_blank">Apple</a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark"
+                        href="https://www.samsung.com/us/" target="_blank">Samsung</a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark"
+                        href="https://store.google.com/us/product/pixel_5" target="_blank">Google</a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark"
+                        href="https://www.huawei.com/us/" target="_blank">Huawei</a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark"
+                        href="https://www.motorola.com/us/" target="_blank">Motorola</a>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Cars</h5>
+                <ul class="list-group text-small">
+                    <a class="list-group-item list-group-item-action list-group-item-dark"
+                        href="https://www.genesis.com/us/en/genesis.html" target="_blank">Genesis</a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark" href="https://www.lexus.com/"
+                        target="_blank">Lexus</a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark" href="https://www.acura.com/"
+                        target="_blank">Acura</a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark"
+                        href="https://www.volvocars.com/us" target="_blank">Volvo</a>
+
+                    <a class="list-group-item list-group-item-action list-group-item-dark"
+                        href="https://www.alfaromeousa.com/" target="_blank">Alfa
+                        Romeo</a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark"
+                        href="https://www.alfaromeousa.com/" target="_blank">Infiniti</a>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>People</h5>
+                <ul class="list-group text-small">
+                    <a class="list-group-item list-group-item-action list-group-item-dark"
+                        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">RenJian Lee</a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark" href="../elwhyel/index.html"
+                        target="_blank">Elwhyel</a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark"
+                        href="https://www.instagram.com/joykitli/?hl=en" target="_blank">Joy Kitli</a>
+                </ul>
+            </div>
         </div>
-    </nav>
+        <div style="height:50px;"></div>
 
-    <div class="container">
-        <p>Created footer, but couldn't get it to stay at bottom of page regardless of the amount of content in page.
-        </p>
-        <p>I created a new class called footer in bootstrap.css and had it position absolute at bottom of 0, page didn't
-            respond.</p>
-        <p>Trying to make something like <a href="https://www.sony.com/electronics/phones/t/smartphones">this</a></p>
-
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1 class="display-4">Notes
-                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button"
-                        aria-expanded="false" aria-controls="collapseExample">
-                        Click to toggle
+        <div class="row row-cols-1 row-cols-md-3">
+            <div class="col mb-4">
+                <div class="card h-100 bg-transparent">
+                    <img src="assets/xperia5ii.jpg" class="card-img-top img-card" alt="Experia 5 II" height="190rem">
+                    <a class="card-body list-group-item-action list-group-item-dark"
+                        href="https://www.sony.com/electronics/phones/t/smartphones" target="_blank">
+                        <h5 class="card-title">Experia 5 II</h5>
+                        <p class="card-text">Pa Dian Ui</p>
                     </a>
-                </h1>
-                <div class="collapse" id="collapseExample">
-                    <p class="lead">it's not that you couldn't get it to work you just didn't have enough time XD</p>
-                    <p class="lead">it didn't work because we are not using bootstrap.css we are actually using the
-                        online version in the stylesheet link</p>
-                    <p class="lead">don't modify the bootstrap.css just use it as reference</p>
-                    <p class="lead">we need to create our own custom css to do our special things 😉</p>
-                    <p class="lead">created new css and putted the footer code there</p>
-                    <p class="lead">looks like it needs to be spread out so spread 'em</p>
-                    <p class="lead">oof idk why this spills over into the footer</p>
-                    <p class="lead">just remove some of these notes and it should be fine</p>
-                    <p class="lead">i guess i didn't have enough time too</p>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100 bg-transparent">
+                    <img src="assets/acura.jpg" class="card-img-top img-card" alt="NSX" height="190rem">
+                    <a class="card-body list-group-item-action list-group-item-dark" href="https://www.acura.com/"
+                        target="_blank">
+                        <h5 class="card-title">Acura NXS</h5>
+                        <p class="card-text">Pao Cia</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100 bg-transparent">
+                    <img src="assets/yl.jpg" class="card-img-top img-card" alt="YL" height="190rem">
+                    <a class="card-body list-group-item-action list-group-item-dark" href="../elwhyel/index.html"
+                        target="_blank">
+                        <h5 class="card-title">YongLiang Lim</h5>
+                        <p class="card-text">Beng Iu</p>
+                    </a>
+                    <button class="btn btn-info" onclick="music('goblin',[])">Voice sample</button>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100 bg-transparent">
+                    <img src="assets/pixel5.jpg" class="card-img-top img-card" alt="Pixel 5">
+                    <a class="card-body list-group-item-action list-group-item-dark"
+                        href="https://store.google.com/us/product/pixel_5" target="_blank">
+                        <h5 class="card-title">Google Pixel 5</h5>
+                        <p class="card-text">Goo Ge Eh Dian Ui</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100 bg-transparent">
+                    <img src="assets/g70interior.jpg" class="card-img-top img-card" alt="G70" height="190rem">
+                    <a class="card-body list-group-item-action list-group-item-dark"
+                        href="https://www.genesis.com/us/en/genesis.html" target="_blank">
+                        <h5 class="card-title">Genesis G70 Interior</h5>
+                        <p class="card-text">Sui Cia</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100 bg-transparent">
+                    <img src="assets/elwhyel.png" class="card-img-top img-card" alt="YL" height="190rem">
+                    <a class="card-body list-group-item-action list-group-item-dark" href="../elwhyel/index.html"
+                        target="_blank">
+                        <h5 class="card-title">YongLiang Chick</h5>
+                        <p class="card-text">Beng Iu Bian Gui</p>
+                    </a>
+                    <button class="btn btn-info" onclick="music('chicken', ['soundbutton1', 'soundbutton2'])">Voice
+                        sample</button>
                 </div>
             </div>
         </div>
 
-        <footer class="pt-4 my-md-5 pt-md-5 border-top brynfooter">
+        <div class="jumbotron jumbotron-fluid" style="margin-top: 32px;">
+            <div class="container">
+                <h1 class="display-4">WOW ABIT NICE
+                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button"
+                        aria-expanded="false" aria-controls="collapseExample">
+                        Click to have your life changed
+                    </a>
+                    <button id="soundbutton2" class="btn btn-danger"
+                        onclick="music('chicken', ['soundbutton1', 'soundbutton2'])">Play it</button>
+                    <button id="rickrollbutton" class="btn btn-warning"
+                        onclick="music('rickroll', ['rickrollbutton'])">Play it mouu!</button>
+                </h1>
+                <div class="collapse" id="collapseExample">
+                    <p class="display-5">The Word Became Flesh</p>
+                    <p class="lead">1 In the beginning was the Word, and the Word was with God, and the Word was God. 2
+                        He was with God in the beginning. 3 Through him all things were made; without him nothing was
+                        made that has been made. 4 In him was life, and that life was the light of all mankind. 5 The
+                        light shines in the darkness, and the darkness has not overcome it. 6 There was a man sent from
+                        God whose name was John. 7 He came as a witness to testify concerning that light, so that
+                        through him all might believe. 8 He himself was not the light; he came only as a witness to the
+                        light. 9 The true light that gives light to everyone was coming into the world. 10 He was in the
+                        world, and though the world was made through him, the world did not recognize him. 11 He came to
+                        that which was his own, but his own did not receive him. 12 Yet to all who did receive him, to
+                        those who believed in his name, he gave the right to become children of God— 13 children born
+                        not of natural descent, nor of human decision or a husband’s will, but born of God. 14 The Word
+                        became flesh and made his dwelling among us. We have seen his glory, the glory of the one and
+                        only Son, who came from the Father, full of grace and truth. 15 (John testified concerning him.
+                        He cried out, saying, “This is the one I spoke about when I said, ‘He who comes after me has
+                        surpassed me because he was before me.’”) 16 Out of his fullness we have all received grace in
+                        place of grace already given. 17 For the law was given through Moses; grace and truth came
+                        through Jesus Christ. 18 No one has ever seen God, but the one and only Son, who is himself God
+                        and is in closest relationship with the Father, has made him known.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="pt-4 my-md-5 pt-md-5 border-top border-dark">
             <div class="row">
                 <div class="col-12 col-md">
-                    <img class="mb-2" src="images/cross.png" alt="" width="30" height="30">
+                    <a class="navbar-brand" href="home.html">
+                        <img class="mb-2" src="assets/cross.png" alt="" width="30" height="30"
+                            style="padding: 2px; border-radius: 25%; background-color: black;">
+                    </a>
                     <small class="d-block mb-3 text-muted">&copy; 2020</small>
                 </div>
                 <div class="col-6 col-md">
                     <h5>Features</h5>
                     <ul class="list-unstyled text-small">
-                        <li><a class="text-muted" href="#">Fire Axe</a></li>
+                        <li><a class="text-muted" href="javascript:void(0)"
+                                onclick="music('rickroll', ['rickrollbutton'])">Fire Axe</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md">
                     <h5>Resources</h5>
                     <ul class="list-unstyled text-small">
-                        <li><a class="text-muted" href="#">Golden Sniper</a></li>
+                        <li><a class="text-muted" href="javascript:void(0)">Golden Sniper</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md">
                     <h5>About</h5>
                     <ul class="list-unstyled text-small">
-                        <li><a class="text-muted" href="#">Arbalest Mou</a></li>
+                        <li><a class="text-muted" href="javascript:void(0)">Arbalest Mou</a></li>
                     </ul>
                 </div>
             </div>
@@ -119,5 +218,7 @@
     </div>
 
 </body>
+
+<script src="js/header.js"></script>
 
 </html>

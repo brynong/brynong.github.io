@@ -1,15 +1,58 @@
 <html>
 
 <head>
-    <link rel="icon" type="image/png" href="favicon.ico">
+    <title>Search</title>
+    <link rel="icon" type="image/png" href="assets/chicken.png">
+    <style>
+        .square {
+            position: absolute;
+            height: 25px;
+            width: 25px;
+            top: 200px;
+            left: 200px;
+            background-color: purple;
+        }
+    </style>
 </head>
 
 <body>
     <h1>You searched for: <span style="color:cyan" id="searched"></span></h1>
+    <audio id="sound1" src="assets/chicken.mp3" preload="auto"></audio>
+    <button onclick="document.getElementById('sound1').play();">Play
+        it</button>
+
+    <h1 id="instruction" style="display: block;">Arrow Keys</h1>
+    <div class="square" id="square" style="display: none;"></div>
 </body>
 
 <script>
     window.onload = document.getElementById("searched").innerHTML = localStorage.getItem("searchText")
+    let square = document.getElementById("square")
+    console.log(square.style.top)
+    let vertical = 200
+    let horizontal = 200
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowUp" || e.key === "ArrowDown" || e.key === "ArrowLeft" || e.key === "ArrowRight") {
+            square.style.display = "block"
+            document.getElementById("instruction").style.display = "none"
+        }
+        if (e.key === "ArrowUp") {
+            vertical -= 5
+            square.style.top = vertical + "px"
+        }
+        if (e.key === "ArrowDown") {
+            vertical += 5
+            square.style.top = vertical + "px"
+        }
+        if (e.key === "ArrowLeft") {
+            vertical -= 5
+            square.style.left = vertical + "px"
+        }
+        if (e.key === "ArrowRight") {
+            vertical += 5
+            square.style.left = vertical + "px"
+        }
+    })
 </script>
 
 </html>
