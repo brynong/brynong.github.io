@@ -3,36 +3,46 @@
 <meta charset="utf-8">
 
 <head>
-    <!-- link here -->
-    <link rel="icon" type="image/png" href="assets/chicken.png">
+    <!-- every page has this -->
+    <link rel="icon" type="image/png" href="assets/images/chicken.png">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- script here -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
-
     <script src="js/script.js"></script>
     <script src="js/header.js"></script>
 
+    <!-- unique to this page -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/card.js"></script>
+
     <title>Bok Bok</title>
-    <audio id="chicken" src="assets/chicken.mp3" preload="auto" loop></audio>
-    <audio id="goblin" src="assets/goblin.ogg" preload="auto"></audio>
-    <audio id="rickroll" src="assets/rickroll.mp3" preload="auto"></audio>
 </head>
 
 <body style="background-color: lightgray;">
     <div id="header"></div>
 
-    <div style="position: absolute; z-index: 9999; top: 75px; right: 25px;">
-        <div id="toast" role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-delay="500">
+    <div style="position: fixed; z-index: 9999; top: 75px; right: 25px; width: 250px;">
+        <div id="toast" role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-delay="2500">
             <div class="toast-header">
-                <img src="assets/chicken.png" class="rounded mr-2" alt="chicken" height="16px">
+                <img src="assets/images/chicken.png" class="rounded mr-2" alt="chicken" height="16px">
+                <strong class="mr-auto">Bok bok</strong>
+                <div style="width: 50px;"></div>
+                <small>just now</small>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="toast-body" class="toast-body">
+                Make footer like header so that it can be added to all the sites
+            </div>
+        </div>
+        <div id="toast2" role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-delay="500">
+            <div class="toast-header">
+                <img src="assets/images/chicken.png" class="rounded mr-2" alt="chicken" height="16px">
                 <strong class="mr-auto">Bok bok</strong>
                 <div style="width: 50px;"></div>
                 <small>right now</small>
@@ -41,7 +51,7 @@
                 </button>
             </div>
             <div id="toast-body" class="toast-body">
-                Make footer like header so that it can be added to all the sites
+                Jokes 😉😉
             </div>
         </div>
     </div>
@@ -81,7 +91,7 @@
                         href="https://www.alfaromeousa.com/" target="_blank">Alfa
                         Romeo</a>
                     <a class="list-group-item list-group-item-action list-group-item-dark"
-                        href="https://www.alfaromeousa.com/" target="_blank">Infiniti</a>
+                        href="https://www.infinitiusa.com/" target="_blank">Infiniti</a>
                 </ul>
             </div>
             <div class="col-6 col-md">
@@ -98,10 +108,10 @@
         </div>
         <div style="height:50px;"></div>
 
-        <div class="row row-cols-1 row-cols-md-3">
+        <div id="allthecards" class="row row-cols-1 row-cols-md-3">
             <div class="col mb-4">
                 <div class="card h-100 bg-transparent">
-                    <img src="assets/xperia5ii.jpg" class="card-img-top img-card" alt="Experia 5 II" height="190rem">
+                    <img src="assets/images/xperia5ii.jpg" class="card-img-top img-card" alt="Experia 5 II" height="190rem">
                     <a class="card-body list-group-item-action list-group-item-dark"
                         href="https://www.sony.com/electronics/phones/t/smartphones" target="_blank">
                         <h5 class="card-title">Experia 5 II</h5>
@@ -111,8 +121,8 @@
             </div>
             <div class="col mb-4">
                 <div class="card h-100 bg-transparent">
-                    <img src="assets/acura.jpg" class="card-img-top img-card" alt="NSX" height="190rem">
-                    <a class="card-body list-group-item-action list-group-item-dark" href="https://www.acura.com/"
+                    <img src="assets/images/acura.jpg" class="card-img-top img-card" alt="NSX" height="190rem">
+                    <a class="card-body list-group-item-action list-group-item-dark" href="https://nsx.acura.com/explore/nsx"
                         target="_blank">
                         <h5 class="card-title">Acura NXS</h5>
                         <p class="card-text">Pao Cia</p>
@@ -121,7 +131,7 @@
             </div>
             <div class="col mb-4">
                 <div class="card h-100 bg-transparent">
-                    <img src="assets/yl.jpg" class="card-img-top img-card" alt="YL" height="190rem">
+                    <img src="assets/images/yl.jpg" class="card-img-top img-card" alt="YL" height="190rem">
                     <a class="card-body list-group-item-action list-group-item-dark" href="../elwhyel/index.html"
                         target="_blank">
                         <h5 class="card-title">YongLiang Lim</h5>
@@ -132,7 +142,7 @@
             </div>
             <div class="col mb-4">
                 <div class="card h-100 bg-transparent">
-                    <img src="assets/pixel5.jpg" class="card-img-top img-card" alt="Pixel 5">
+                    <img src="assets/images/pixel5.jpg" class="card-img-top img-card" alt="Pixel 5">
                     <a class="card-body list-group-item-action list-group-item-dark"
                         href="https://store.google.com/us/product/pixel_5" target="_blank">
                         <h5 class="card-title">Google Pixel 5</h5>
@@ -142,39 +152,75 @@
             </div>
             <div class="col mb-4">
                 <div class="card h-100 bg-transparent">
-                    <img src="assets/g70interior.jpg" class="card-img-top img-card" alt="G70" height="190rem">
+                    <img src="assets/images/g70.jpg" class="card-img-top img-card" alt="G70" height="190rem">
                     <a class="card-body list-group-item-action list-group-item-dark"
                         href="https://www.genesis.com/us/en/genesis.html" target="_blank">
-                        <h5 class="card-title">Genesis G70 Interior</h5>
+                        <h5 class="card-title">Genesis G70</h5>
                         <p class="card-text">Sui Cia</p>
                     </a>
                 </div>
             </div>
             <div class="col mb-4">
                 <div class="card h-100 bg-transparent">
-                    <img src="assets/elwhyel.png" class="card-img-top img-card" alt="YL" height="190rem">
+                    <img src="assets/images/elwhyel.png" class="card-img-top img-card" alt="YL" height="190rem">
                     <a class="card-body list-group-item-action list-group-item-dark" href="../elwhyel/index.html"
                         target="_blank">
                         <h5 class="card-title">YongLiang Chick</h5>
                         <p class="card-text">Beng Iu Bian Gui</p>
                     </a>
-                    <button class="btn btn-info" onclick="music('chicken', ['soundbutton1', 'soundbutton2'])">Voice
+                    <button class="btn btn-info" onclick="music('chicken', ['chickenbutton1', 'chickenbutton2'])">Voice
                         sample</button>
                 </div>
             </div>
         </div>
+        <div style="height:50px;"></div>
 
-        <div class="jumbotron jumbotron-fluid" style="margin-top: 32px;">
+        <div class="jumbotron">
+            <h1 class="display-4">Add Card</h1>
+            <form action="javascript:void(0)">
+                <div class="form-group">
+                    <label for="picUrl">Picture URL</label>
+                    <input type="text" onkeydown="enableButton()" class="form-control" id="picUrl" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" onkeydown="enableButton()" class="form-control" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="website">Website</label>
+                    <input type="text" onkeydown="enableButton()" class="form-control" id="website">
+                </div>
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" onkeydown="enableButton()" class="form-control" id="title">
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" onkeydown="enableButton()" class="form-control" id="description">
+                </div>
+                <button type="submit" id="submitButton" class="btn btn-primary" onclick="addCardToList()">Add Card</button>
+                <a class="btn btn-danger" href="home.html">Refresh page (New cards go bye bye)</a>
+            </form>
+        </div>
+
+
+        <!-- testing out form submission -->
+        <!-- <input class="form-control mr-sm-2" id="search" type="search" placeholder="Search" aria-label="Search"
+            style="width: auto">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit" onclick="search()">Submit</button> -->
+
+        <div class="jumbotron" style="margin-top: 32px;">
             <div class="container">
                 <h1 class="display-4">WOW ABIT NICE
                     <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button"
                         aria-expanded="false" aria-controls="collapseExample">
                         Click to have your life changed
                     </a>
-                    <button id="soundbutton2" class="btn btn-danger"
-                        onclick="music('chicken', ['soundbutton1', 'soundbutton2'])">Play it</button>
+                    <button id="chickenbutton2" class="btn btn-danger"
+                        onclick="music('chicken', ['chickenbutton1', 'chickenbutton2'])">Play it</button>
                     <button id="rickrollbutton" class="btn btn-warning"
                         onclick="music('rickroll', ['rickrollbutton'])">Play it mouu!</button>
+                    <a class="btn btn-dark" href="addcard.html">Add Card</a>
                 </h1>
                 <div class="collapse" id="collapseExample">
                     <p class="display-5">The Word Became Flesh</p>
@@ -204,7 +250,7 @@
             <div class="row">
                 <div class="col-12 col-md">
                     <a class="navbar-brand" href="home.html">
-                        <img class="mb-2" src="assets/cross.png" alt="" width="30" height="30"
+                        <img class="mb-2" src="assets/images/cross.png" alt="" width="30" height="30"
                             style="padding: 2px; border-radius: 25%; background-color: black;">
                     </a>
                     <small class="d-block mb-3 text-muted">&copy; 2020</small>
@@ -225,7 +271,7 @@
                 <div class="col-6 col-md">
                     <h5>About</h5>
                     <ul class="list-unstyled text-small">
-                        <li><a class="text-muted" href="javascript:void(0)">Arbalest Mou</a></li>
+                        <li><a class="text-muted" disabled href="javascript:void(0)">Arbalest Mou</a></li>
                     </ul>
                 </div>
             </div>
@@ -234,11 +280,16 @@
 
     <script>
         window.addHeader()
+        window.addAllTheCards()
         window.onload = () => {
-            setInterval(() => {
-                toast()
-            }, 2500)
-        }
+            // setInterval(() => {
+                //     toast()
+                // }, 5000)
+                setInterval(() => {
+                    toast()
+                }, 2000)
+            }
+            window.enableButton()
     </script>
 </body>
 
