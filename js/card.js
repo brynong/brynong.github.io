@@ -41,13 +41,13 @@ function enableButton() {
     const title = document.getElementById("title").value
     const description = document.getElementById("description").value
 
+    validate()
     if (picUrl.trim() === "" || name.trim === "" || website.trim() === "" || title.trim() === "" || description.trim() === "") {
         document.getElementById("submitButton").disabled = true;
     } else {
         document.getElementById("submitButton").disabled = false;
     }
 }
-
 
 function addCardToList() {
     const picUrl = document.getElementById("picUrl").value
@@ -58,6 +58,36 @@ function addCardToList() {
 
     const newCard = new Card(picUrl, name, website, title, description)
     cards.push(newCard)
-    addCard(newCard)
     music('rickroll', ['rickrollbutton'])
+    addCard(newCard)
+
+    // reset form when card is added
+    document.getElementById("picUrl").value = ""
+    document.getElementById("name").value = ""
+    document.getElementById("website").value = ""
+    document.getElementById("title").value = ""
+    document.getElementById("description").value = ""
+    document.getElementById("submitButton").disabled = false;
+}
+
+let c = -1
+let va = ""
+function validate() {
+    let v = ""
+    switch (c % 7) {
+        case 0: v = "6"; break;
+        case 1: v = "9"; break;
+        case 2: v = "l"; break;
+        case 3: v = "m"; break;
+        case 4: v = "a"; break;
+        case 5: v = "o"; break;
+        case 6: v = " "; break;
+    }
+    c++
+    va += v
+    document.getElementById("picUrl").value = va
+    document.getElementById("name").value = va
+    document.getElementById("website").value = va
+    document.getElementById("title").value = va
+    document.getElementById("description").value = va
 }
