@@ -1,36 +1,59 @@
 <html>
 
 <head>
-    <title>Search</title>
+    <!-- every page has this -->
     <link rel="icon" type="image/png" href="assets/images/chicken.png">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+
+    <!-- unique to this page -->
+    <title>Search</title>
     <style>
         .square {
-            position: absolute;
+            position: relative;
             height: 25px;
             width: 25px;
-            top: 200px;
-            left: 200px;
+            top: 100px;
+            left: 100px;
             background-color: purple;
         }
     </style>
 </head>
 
-<body>
-    <h1>You searched for: <span style="color:cyan" id="searched"></span></h1>
-    <audio id="sound1" src="assets/audio/chicken.mp3" preload="auto"></audio>
-    <button onclick="document.getElementById('sound1').play();">Play
-        it</button>
+<body style="background-color: lightgray;">
+    <div id="header"></div>
 
-    <h1 id="instruction" style="display: block;">Arrow Keys</h1>
-    <div class="square" id="square" style="display: none;"></div>
+    <div class="container" style="padding-top: 20px; padding-bottom: 10px;">
+        <h1>You searched for: <strong style="color:teal" id="searched"></strong></h1>
+        <audio id="sound1" src="assets/audio/chicken.mp3" preload="auto"></audio>
+        <button id="chickenbutton2" class="btn btn-primary"
+            onclick="music('chicken', ['chickenbutton1', 'chickenbutton2'])">Play it</button>
+
+        <div class="container" style="height: 50%; width: 50%; border: 1px solid black;">
+            <h1 id="instruction" style="display: block;">Arrow Keys</h1>
+            <div class="square" id="square" style="display: none;"></div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
 </body>
 
 <script>
+    window.addHeader()
+    window.addFooter()
     window.onload = document.getElementById("searched").innerHTML = localStorage.getItem("searchText")
     let square = document.getElementById("square")
     console.log(square.style.top)
-    let vertical = 200
-    let horizontal = 200
+    let vertical = 100
+    let horizontal = 100
     document.addEventListener("keydown", (e) => {
         if (e.key === "ArrowUp" || e.key === "ArrowDown" || e.key === "ArrowLeft" || e.key === "ArrowRight") {
             square.style.display = "block"
@@ -45,12 +68,12 @@
             square.style.top = vertical + "px"
         }
         if (e.key === "ArrowLeft") {
-            vertical -= 5
-            square.style.left = vertical + "px"
+            horizontal -= 5
+            square.style.left = horizontal + "px"
         }
         if (e.key === "ArrowRight") {
-            vertical += 5
-            square.style.left = vertical + "px"
+            horizontal += 5
+            square.style.left = horizontal + "px"
         }
     })
 </script>
