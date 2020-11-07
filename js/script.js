@@ -60,6 +60,7 @@ function toast() {
     $(".toast").toast('show')
 }
 
+/*
 // noob internet code that doesn't work -_- stupid array comes out as empty 
 var toastElList = [].slice.call(document.querySelectorAll('.toast'))
 var toastList = toastElList.map(function (toastEl) {
@@ -69,3 +70,4 @@ var toastList = toastElList.map(function (toastEl) {
 toastList.forEach(toast => toast.show()); // This show them
 console.log(toastList); // Testing to see if it works
 // it does not work if Array(0) is shown in console
+*/

@@ -1,0 +1,37 @@
+<html id="content">
+
+<div style="padding:25px">
+    <h1>Note: html and functions that require other sources are unavailable due to the nature of
+        this
+        script.</h1>
+    <input id="fetch" placeholder="Website to fetch" aria-label="Search" style="width: 50%"
+        value="http://24.253.241.180:65456/chicken/bryn/home.html">
+    <button type="submit" onclick="main()">Fetch</button>
+</div>
+
+</html>
+
+<script>
+    async function main() {
+        const website = document.getElementById("fetch").value
+        // await fetch("https://us.louisvuitton.com/eng-us/products/pochette-accessoires-monogram-005656")
+        await fetch(website)
+            .then(response => {
+                return response.text();
+            }).then(html => {
+                // console.log(html);
+                document.getElementById("content").innerHTML = `
+                <div style="padding:25px">
+                    <h1>Note: html and functions that require other sources are unavailable due to the nature of
+                        this
+                        script.</h1>
+                    <input id="fetch" placeholder="Website to fetch" aria-label="Search" style="width: 50%"
+                        value="http://24.253.241.180:65456/chicken/bryn/home.html">
+                    <button type="submit" onclick="main()">Fetch</button>
+                </div>
+                `+ html
+            }).catch(function (err) {
+                console.warn('Something went wrong.', err);
+            });
+    }
+</script>

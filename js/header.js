@@ -25,19 +25,16 @@ function addHeader() {
                 <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="addcard.html">Add Card</a>
-                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        PFFRO
+                        More
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Big Brain</a>
-                        <a class="dropdown-item" href="#">Yuge Brain</a>
+                        <a class="dropdown-item" href="addcard.html">Add Card</a>
+                        <a class="dropdown-item" href="prayer.html">Prayer Roulette</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Smol Boi</a>
+                        <a class="dropdown-item" href="" onclick="alert('patient abit mou')">Coming Soon</a>
                     </div>
                 </li>
                 <li class="nav-item">
